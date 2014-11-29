@@ -1,0 +1,43 @@
+<div class='login-form'>
+  <p>You can access contact application after the login </p>
+  <h1>Log in</h1>
+  <%= form_tag( {:action => 'login_attempt'}, {onSubmit: 'return login_form_validation();'} ) do %>
+      <p>
+         <span id ='username'></span>
+        <%= text_field_tag :username,  nil, placeholder: 'Username or Email', class: 'input-field', id: 'uname'%>
+      </p>
+      <p>
+        <span id ='password'></span>
+        <%= password_field_tag :password, nil, placeholder: 'Password', class: 'input-field', id: 'pwd' %>
+      </p>
+      <%= submit_tag('Log In', class: 'submit')%>
+      <script>
+          function login_form_validation()
+          {
+              var username = document.getElementById( 'uname').value;
+              var password = document.getElementById( 'pwd').value;
+              if( username && password )
+              {
+                  return true;
+              }
+              else
+              {
+                  if( username == '' )
+                  {
+                      document.getElementById('password').innerHTML = "";
+                      document.getElementById('username').innerHTML = "Username can't be blank";
+                      return false;
+                  }
+                  else
+                  {
+                      document.getElementById('username').innerHTML = "";
+                      document.getElementById('password').innerHTML = "Password can't be blank";
+                      return false;
+                  }
+              }
+
+          }
+      </script>
+  <% end %>
+</div>
+

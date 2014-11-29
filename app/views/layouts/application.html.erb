@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsPassAuth</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= yield :logout %>
+</head>
+<body >
+<% if @current_user.present? %>
+    <p>Hi..Welcome <%= @current_user.username %> </p>
+<%end%>
+<% flash.each do |key, value| %>
+    <p>
+      <span id=<%= key %>><%= value %></span>
+    </p>
+<%end%>
+<%= yield %>
+</body>
+</html>

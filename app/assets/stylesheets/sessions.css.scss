@@ -1,0 +1,83 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.login-form
+{
+  background-color: #CCCCCC;
+  text-align: none;
+  width: 400px;
+  margin: 100px auto;
+  padding: 1em;
+  border-radius: 10px;
+  border: solid #CCCCCC 2px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+}
+h1
+{
+  color: coral;
+  text-shadow: coral;
+}
+.input-field
+{
+  width: 300px;
+  height: 20px;
+  font-size: 14px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 2px solid #fa8dd4;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+  -moz-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+  padding: 5px;
+  border-spacing: 5px;
+
+}
+.input-field:focus
+{
+  border: 2px solid rgb(142, 255, 79);
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+  -moz-box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+  box-shadow: 0px 0px 15px 5px rgba(255, 255, 190, .75);
+}
+
+.submit
+{
+  background-color:#44c767;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:17px;
+  padding:10px 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+.submit:hover
+{
+  background-color:#5cbf2a;
+}
+.submit:active
+{
+  position:relative;
+  top:1px;
+}
+label
+{
+  display: block;
+
+}
+#username
+{
+  color: #ff1f40;
+}
+#password
+{
+  color: #ff1f40;
+}
+
